@@ -1,8 +1,8 @@
-from members import Member
+from members.members import Member
 
 class Faculty(Member):
-    def __init__(self, member_id, name, max_book_allowed):
-        super().__init__(member_id, name, max_book_allowed)
+    def __init__(self, member_id, name):
+        super().__init__(member_id, name, 10)
         self._borrowed_books = []
 
     @property

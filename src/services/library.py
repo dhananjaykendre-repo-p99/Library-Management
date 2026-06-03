@@ -20,14 +20,14 @@ class Library:
 
     def find_book_by_id(self, book_id):
         for book in self._books:
-            if book.book_id == book_id:
+            if book._book_id == book_id:
                 return book
         return None
     
     def display_all_books(self):
-        result = "\n========== BOOK LIST =========="
+        result = "\n========== BOOK LIST ==========\n"
         for book in self._books:
-            result += f"ID: {book.id} | Title: {book.title} | Author: {book.author} | "f"Type: {book.get_book_type()} | Status: {book.status}"
+            result += f"ID: {book.id} | Title: {book.title} | Author: {book.author} | "f"Type: {book.get_book_type()} | Available: {book.is_available()}\n"
         return result
 
     def search_by_title(self, title):

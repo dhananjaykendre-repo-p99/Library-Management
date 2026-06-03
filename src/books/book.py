@@ -12,7 +12,7 @@ class Book(Borrowable):
 
     @property
     def id(self):
-        return seld._book_id
+        return self._book_id
     
     @property
     def title(self):
