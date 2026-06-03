@@ -84,7 +84,7 @@ def main():
 
             return_book = library.find_book_by_id(return_id)
             if return_book is not None:
-                student.return_book(return_book)
+                print(student.return_book(return_book))
             else:
                 print("Book not found.")
         elif choice == 4:
