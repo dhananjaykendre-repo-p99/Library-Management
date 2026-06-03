@@ -2,7 +2,7 @@ from abc import abstractmethod
 from interfaces.borrowable import Borrowable
 from enums.book_status import BookStatus
 
-class book(Borrowable):
+class Book(Borrowable):
     def __init__(self, book_id, title, author, isbn):
         self._book_id = book_id
         self._title = title
