@@ -89,10 +89,10 @@ def main():
                 print("Book not found.")
         elif choice == 4:
             title = input("Enter title: ")
-            library.search_by_title(title)
+            print(library.search_by_title(title))
         elif choice == 5:
             author = input("Enter author: ")
-            library.search_by_author(author)
+            print(library.search_by_author(author))
         elif choice == 6:
             borrowed_books = student.get_borrowed_books()
             if not borrowed_books:

@@ -33,10 +33,14 @@ class Library:
     def search_by_title(self, title):
         for book in self._books:
             if book.title.lower() == title.lower():   
-                return f"Found: {book.title}"
+                return f"Found: ID: {book.id} | Title: {book.title} | Author: {book.author} | Type: {book.get_book_type()} | Available: {book.is_available()}"
+        return "Book not found."
 
     def search_by_author(self, author):
+        results = []
         for book in self._books:
-            if book.author.lower() == title.author():   
-                return f"Found: {book.title}"
-            
+            if book.author.lower() == author.lower():   
+                results.append(f"ID: {book.id} | Title: {book.title} | Type: {book.get_book_type()} | Available: {book.is_available()}")
+        if results:
+            return "Found book(s) by author:\n" + "\n".join(results)
+        return "No books found by this author."

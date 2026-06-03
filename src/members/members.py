@@ -17,7 +17,7 @@ class Member:
 
     @property
     def max_books_allowed(self):
-        return self.max_books_allowed
+        return self._max_books_allowed
 
     def get_borrowed_books(self):
         return self._borrowed_books
