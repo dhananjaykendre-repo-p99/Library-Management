@@ -31,10 +31,15 @@ class Library:
         return result
 
     def search_by_title(self, title):
+        search_query = title.lower()
+        result = []
         for book in self._books:
-            if book.title.lower() == title.lower():   
-                return f"Found: ID: {book.id} | Title: {book.title} | Author: {book.author} | Type: {book.get_book_type()} | Available: {book.is_available()}"
-        return "Book not found."
+            if search_query in book.title.lower()  :   
+                result.append( f"Found: ID: {book.id} | Title: {book.title} | Author: {book.author} | Type: {book.get_book_type()} | Available: {book.is_available()}")
+        if len(result):
+            return result
+        else:
+            return None
 
     def search_by_author(self, author):
         results = []

@@ -89,7 +89,8 @@ def main():
                 print("Book not found.")
         elif choice == 4:
             title = input("Enter title: ")
-            print(library.search_by_title(title))
+            for result in library.search_by_title(title):
+                print(result)
         elif choice == 5:
             author = input("Enter author: ")
             print(library.search_by_author(author))
